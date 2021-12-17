@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function hasil() {
+				const phi = 3.14;
+				let jari_jari = document.getElementById("jari2").value;
+				console.log("Jari-jari Lingkaran = " + jari_jari + " cm");
+				let luas = phi * jari_jari * jari_jari;
+				console.log(
+					"Luas lingkaran dengan jari-jari " +
+						jari_jari +
+						" cm adalah " +
+						luas +
+						" cm"
+				);
+				let keliling = 2 * phi * jari_jari;
+				console.log(
+					"Keliling lingkaran dengan jari-jari " +
+						jari_jari +
+						" cm adalah " +
+						keliling +
+						" cm"
+				);
+				let hasil_sebenarnya = document.getElementById("hasil");
+				hasil_sebenarnya.innerHTML =
+					"Luas lingkaran dengan jari-jari " +
+					jari_jari +
+					" cm adalah " +
+					luas +
+					" cm </br>" +
+					" Keliling lingkaran dengan jari-jari " +
+					jari_jari +
+					"cm adalah " +
+					keliling +
+					" cm";
+				return keliling - luas;
+			}
+		</script>
+	</head>
+	<body>
+		<h3>Menghitung luas dan keliling Lingkaran</h3>
+		jari - jari =
+		<input id="jari2" type="number" value="" size="10" />
+		<br />
+		<button onclick="hasil()">Jumlahkan</button>
+		<br />
+		<span id="hasil"> </span>
+	</body>
+</html>

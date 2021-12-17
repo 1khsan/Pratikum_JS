@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<th>Nilai Dollar</th>
+				<th>KURS DOLLAR</th>
+				<th>Nilai Rupiah</th>
+			</tr>
+			<tr>
+				<td>
+					<input type="number" id="input" onchange="nilai_sebenarnya()" />
+				</td>
+				<td><input type="text" value="14.650" /></td>
+				<td><input type="number" id="hasil" /></td>
+			</tr>
+		</table>
+		<br>
+		<h3 id="tampil" style="background-color: salmon; color: white; display: inline;"></h3>
+		<script>
+			function nilai_sebenarnya() {
+				const satuDollar = 14650;
+				let masuk = document.getElementById('input').value;
+				let jumlah = masuk * satuDollar;
+				let rp = new Intl.NumberFormat('id-ID');
+				document.getElementById('hasil').value = jumlah;
+				console.log(masuk + " Dollar didalam rupiah adalah Rp. " + rp.format(jumlah));
+				document.getElementById('tampil').innerHTML = input.value + " Dolar dalam rupiah adalah Rp. " + rp.format(jumlah);
+
+			}
+		</script>
+	</body>
+</html>

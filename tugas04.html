@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<input type="number" id="awal" onchange="jumlahkan()" />
+		<br />
+		+
+		<br />
+		<input type="number" id="ahir" onchange="jumlahkan()" />
+		<br />
+		=
+		<br />
+		<input type="text" id="hasil" />
+		<script>
+			function jumlahkan() {
+				let angka_1 = document.getElementById("awal").value;
+				let angka_2 = document.getElementById("ahir").value;
+				let finish = document.getElementById("hasil");
+				let jumlah = Number(angka_1) + Number(angka_2);
+				finish.value = jumlah;
+			}
+		</script>
+	</body>
+</html>
